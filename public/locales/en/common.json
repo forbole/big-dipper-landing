@@ -1,0 +1,20 @@
+{
+  "bigDipper": "Big Dipper",
+  "forbole": "Forbole",
+  "slogan": "The Explorer for the Interchain",
+  "copyright": "Copyright © Forbole",
+  "donate": "Donate",
+  "about": "About",
+  "faq": "FAQ",
+  "termsAndConditions": "Terms and conditions",
+  "privacyPolicy": "Privacy Policy",
+  "stakeNow": "Stake Now",
+  "contact": "Contact Us",
+  "telegram": "Telegram",
+  "linkedin": "Linkedin",
+  "twitter": "Twitter",
+  "github": "Github",
+  "donation": "Donation",
+  "donationContent": "Big Dipper is always open sourced and free to use. Anyone can use it to monitor available Cosmos hub or zones, or port to your own chain built with Cosmos SDK. We welcome any supports to help us improve this project.",
+  "copied": "Copied {{key}} address"
+}
