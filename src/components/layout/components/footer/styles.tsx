@@ -40,6 +40,7 @@ export const useGetStyles = () => {
           '& .links__group': {
             display: 'flex',
             flexDirection: 'column',
+            alignItems: 'flex-start',
             '& a': {
               margin: '0.5rem 0',
               color: 'inherit',
