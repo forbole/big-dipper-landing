@@ -10,12 +10,19 @@ export const useGetStyles = () => {
         root: {
           '&.footer': {
             background: '#131316',
-            padding: '1rem',
+            padding: '3rem 1.5rem 4rem',
             color: 'white',
-            '& p': {
-              marginTop: 0,
-              marginBottom: '0.3rem',
-            },
+          },
+          '& p': {
+            marginTop: 0,
+            marginBottom: '0.5rem',
+          },
+          '& .footer__slogan': {
+            marginTop: '0.2rem',
+          },
+          '& .footer__donate--excerpt': {
+            margin: '1.5rem 0 1rem',
+            fontSize: '0.875rem',
           },
           '& .footer__logo': {
             width: '180px',
@@ -23,14 +30,12 @@ export const useGetStyles = () => {
           '& .footer__copyright': {
             color: '#C4C4C4',
           },
-          '& .footer__social': {
-            display: 'flex',
-            alignItems: 'flex-end',
-            justifyContent: 'space-between',
-            margin: '0.75rem 0',
-          },
           '& .footer__links': {
             marginTop: '1rem',
+          },
+          '& h3': {
+            color: 'rgba(153, 153, 153, 1)',
+            fontWeight: 500,
           },
           '& .links__group': {
             display: 'flex',
@@ -67,27 +72,31 @@ export const useGetStyles = () => {
           },
           '& .footer__donate-button': {
             fontWeight: 400,
+            padding: '0.2rem 1rem',
           },
           [getMinMediaQuery(theme?.breakpoints?.values?.tablet)]: {
 
           },
           [getMinMediaQuery(theme?.breakpoints?.values?.desktop)]: {
             '&.footer': {
-              padding: '2rem',
+              padding: '3rem 2rem 5rem',
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
             },
             '& .footer__links': {
-              gridColumn: '2/4',
+              gridColumn: '2/5',
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               marginTop: 0,
+            },
+            '& h3': {
+              fontSize: '1.125rem',
             },
             '& .footer__social': {
               justifyContent: 'flex-end',
             },
             '& .footer__donate-button': {
-              marginLeft: '1.5rem',
+
             },
           },
         },
