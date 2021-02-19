@@ -45,6 +45,7 @@ const Footer = () => {
         {footerLinks.map((group) => {
           return (
             <div key={group.key} className={`${group.key} links__group`}>
+              <h3>{t(`common:${group.key}`)}</h3>
               {
                     group.links.map((x) => {
                       if (validator.isURL(x.url)) {
@@ -71,22 +72,24 @@ const Footer = () => {
             </div>
           );
         })}
-      </div>
-      {/* ============================= */}
-      {/* social */}
-      {/* ============================= */}
-      <div className="footer__social">
-        <SocialMedia />
-        <div>
-          <Donate open={open} handleClose={handleClose} />
-          <Button
-            className="footer__donate-button"
-            variant="contained"
-            color="primary"
-            onClick={handleOpen}
-          >
-            {t('common:donate')}
-          </Button>
+        {/* ============================= */}
+        {/* social */}
+        {/* ============================= */}
+        <div className="footer__social">
+          <h3>{t('common:community')}</h3>
+          <SocialMedia />
+          <div>
+            <p className="footer__donate--excerpt">{t('common:donateExcerpt')}</p>
+            <Donate open={open} handleClose={handleClose} />
+            <Button
+              className="footer__donate-button"
+              variant="contained"
+              color="primary"
+              onClick={handleOpen}
+            >
+              {t('common:donate')}
+            </Button>
+          </div>
         </div>
       </div>
     </div>
