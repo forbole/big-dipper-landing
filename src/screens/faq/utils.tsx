@@ -48,6 +48,27 @@ const getFaqDetails = () => {
         {
           question: 'chooseValidatorQuestion',
           ans: 'chooseValidatorAnswer',
+          details: [
+            {
+              content: 'chooseValidatorAnswerDetail1',
+            },
+            {
+              content: 'chooseValidatorAnswerDetail2',
+            },
+            {
+              content: 'chooseValidatorAnswerDetail3',
+            },
+            {
+              content: 'chooseValidatorAnswerDetail4',
+            },
+            {
+              content: 'chooseValidatorAnswerDetail5',
+            },
+            {
+              content: 'chooseValidatorAnswerDetail6',
+            },
+          ],
+          conclusion: 'chooseValidatorConclusion',
         },
       ],
     },

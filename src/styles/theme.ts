@@ -70,14 +70,6 @@ const darkThemeOverride = {
     type: 'dark',
     custom: {
       backgroundExample: 'rgba(10, 10, 10, 1)',
-      fonts: {
-        fontOne: 'rgba(230, 230, 230, 1)', // header
-        fontTwo: 'rgba(170, 170, 171, 1)', // body and paragraph
-        fontThree: 'rgba(129, 129, 129, 1)', // subfonts
-        fontFour: 'rgba(153, 153, 153, 1) ', // placeholders
-        fontFive: 'rgba(39, 140, 255, 1)', // names and address (links)
-        fontOneToTwo: 'rgba(170, 170, 171, 1)', // fonts the switch from fontOne in light mode to fontTwo in dark mode
-      },
     },
   },
 };

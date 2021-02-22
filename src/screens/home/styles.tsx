@@ -8,6 +8,7 @@ export const useGetStyles = () => {
     return (
       createStyles({
         root: {
+          fontSize: '1rem',
           '& .home-page__hero': {
             minHeight: '70vh',
             backgroundColor: '#131316',
@@ -22,7 +23,6 @@ export const useGetStyles = () => {
           },
           '& .hero__title': {
             width: '100%',
-            // fontSize: '1.625rem',
             fontSize: '2rem',
             color: 'white',
             fontWeight: 500,
@@ -46,10 +46,6 @@ export const useGetStyles = () => {
             maxWidth: '800px',
           },
           '& .fixedratio': {
-            // paddingTop: '56.25%',
-            // backgroundImage: 'url(http://voormedia.com/examples/north-sea-regatta.jpg)',
-            // backgroundSize: 'cover',
-            // backgroundPosition: 'center',
             width: '100%',
             margin: 0,
             display: 'block',
