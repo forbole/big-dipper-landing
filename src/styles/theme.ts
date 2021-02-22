@@ -37,6 +37,11 @@ export const common = {
     },
     custom: {
       white: 'rgba(255, 255, 255, 1)',
+      margins: {
+        large: '24px',
+        medium: '16px',
+        small: '16px',
+      },
     },
   },
 };
@@ -47,6 +52,13 @@ const lightThemeOverride = {
     type: 'light',
     custom: {
       backgroundExample: 'rgba(246, 247, 249, 1)',
+      fonts: {
+        fontOne: 'rgba(0, 0, 0, 1)', // header
+        fontTwo: 'rgba(65, 65, 65, 1)', // body and paragraph
+        fontThree: 'rgba(119, 119, 119, 1)', // subfonts
+        fontFour: 'rgba(153, 153, 153, 1)', // placeholders
+        fontFive: 'rgba(29, 134, 255, 1)', // names and address (links)
+      },
     },
   },
 };

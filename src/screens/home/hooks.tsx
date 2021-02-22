@@ -6,7 +6,7 @@ import { Network } from '@models';
 import { formatNetworkData } from './utils';
 
 export const useHomeHook = () => {
-  const NETWORK_LIST_API = 'https://gist.githubusercontent.com/kwunyeung/8be4598c77c61e497dfc7220a678b3ee/raw/7564611ee896b698eeb9657e981d414dbacf5efe/bd-networks.json';
+  const NETWORK_LIST_API = 'https://gist.githubusercontent.com/kwunyeung/8be4598c77c61e497dfc7220a678b3ee/raw/bd-networks.json';
 
   const [networks, setNetworks] = useState<Network[]>([]);
 
