@@ -48,6 +48,7 @@ export const useGetStyles = () => {
               paddingBottom: '1rem',
               borderBottom: 'solid 1px #3c3c3c',
               transition: '0.2s',
+              width: '100%',
               '&:hover': {
                 color: 'rgba(255,255,255, 0.3)',
               },
@@ -65,6 +66,7 @@ export const useGetStyles = () => {
               '& a': {
                 borderBottom: 'none',
                 padding: 0,
+                width: 'auto',
               },
               '&.media': {
                 display: 'grid',
