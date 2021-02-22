@@ -58,7 +58,6 @@ const lightThemeOverride = {
         fontThree: 'rgba(119, 119, 119, 1)', // subfonts
         fontFour: 'rgba(153, 153, 153, 1)', // placeholders
         fontFive: 'rgba(29, 134, 255, 1)', // names and address (links)
-        fontOneToTwo: 'rgba(0, 0, 0, 1)', // fonts the switch from fontOne in light mode to fontTwo in dark mode
       },
     },
   },
