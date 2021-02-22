@@ -25,13 +25,11 @@ const Layout = (props:any) => {
     baseUrl = window?.location?.origin || '';
     currentPath = window?.location?.href || '';
   }
-  console.log('baseUrl', baseUrl);
 
   const title = 'Big Dipper';
   const type = 'website';
   const description = t('headDescription');
   const imageUrl = `${baseUrl}/images/big-dipper-social-media.png`;
-  console.log('imageUrl', imageUrl);
 
   return (
     <>
