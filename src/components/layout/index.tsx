@@ -29,7 +29,7 @@ const Layout = (props:any) => {
   const title = 'Big Dipper';
   const type = 'website';
   const description = t('headDescription');
-  const imageUrl = `$${baseUrl}/images/icons/favicon-32x32.png`;
+  const imageUrl = `${baseUrl}/images/big-dipper-social-media.png`;
 
   return (
     <>
