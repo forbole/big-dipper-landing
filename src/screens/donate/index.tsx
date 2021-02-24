@@ -31,7 +31,7 @@ const Donate = () => {
                 <Grid key={x.coin} item xs={12} lg={6}>
                   <Paper className={classnames('card')} elevation={5}>
                     <div className={classnames('container')}>
-                      <img src="/images/icons/android-chrome-512x512.png" alt="" />
+                      <img src={`/images/icons/${x.coin}.png`} alt="" />
                       <div className={classnames('text-container')}>
                         <h2 className={classnames('subTitle')}>
                           {x.coin}

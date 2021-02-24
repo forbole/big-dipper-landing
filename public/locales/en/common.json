@@ -19,5 +19,6 @@
   "donationContent": "Big Dipper is always open sourced and free to use. Anyone can use it to monitor available Cosmos hub or zones, or port to your own chain built with Cosmos SDK. We welcome any support to help us improve this project.",
   "copied": "Copied {{key}} address",
   "blog": "Blog",
-  "company": "Company"
+  "company": "Company",
+  "community": "Community"
 }
