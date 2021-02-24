@@ -4,20 +4,12 @@ import validator from 'validator';
 import { useTranslation } from 'i18n';
 import FooterLogo from '@assets/big-dipper-white.svg';
 import { SocialMedia } from '@components';
-import { Button } from '@material-ui/core';
 import { footerLinks } from './utils';
-import { useFooterHook } from './hooks';
 import { useGetStyles } from './styles';
-// import { Donate } from './components';
 
 const Footer = () => {
   const { t } = useTranslation(['common']);
   const { classes } = useGetStyles();
-  const {
-    open,
-    handleOpen,
-    handleClose,
-  } = useFooterHook();
 
   // ============================
   // Footer
@@ -80,15 +72,6 @@ const Footer = () => {
           <SocialMedia />
           <div>
             <p className="footer__donate--excerpt">{t('common:donateExcerpt')}</p>
-            {/* <Donate open={open} handleClose={handleClose} /> */}
-            {/* <Button
-              className="footer__donate-button"
-              variant="contained"
-              color="primary"
-              // onClick={handleOpen}
-            >
-              {t('common:donate')}
-            </Button> */}
             <Link key="donate" href="/donate">
               <a className="footer__donate-button">
                 {t('common:donate')}
