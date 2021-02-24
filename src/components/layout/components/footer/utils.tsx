@@ -39,6 +39,10 @@ export const footerLinks = [
         key: 'privacyPolicy',
         url: '/privacy-policy',
       },
+      {
+        key: 'donate',
+        url: '/donate',
+      },
     ],
   },
   // {

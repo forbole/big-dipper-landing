@@ -75,7 +75,11 @@ export const useGetStyles = () => {
           },
           '& .footer__donate-button': {
             fontWeight: 400,
-            padding: '0.2rem 1rem',
+            padding: '0.4rem 1rem',
+            background: '#FD3B4C',
+            borderRadius: 5,
+            color: '#FFFFFF',
+            textDecoration: 'none',
           },
           [getMinMediaQuery(theme?.breakpoints?.values?.tablet)]: {
 

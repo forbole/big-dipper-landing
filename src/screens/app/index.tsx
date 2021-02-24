@@ -7,15 +7,19 @@ import client from '@graphql';
 import {
   createMuiTheme, ThemeProvider,
 } from '@material-ui/core/styles';
+import { ToastContainer } from 'react-toastify';
 import {
   darkTheme, lightTheme,
 } from '@styles';
+import { GlobalContext } from '@src/contexts';
 import { appWithTranslation } from '../../../i18n';
+import { useGetStyles } from './styles';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const useLayoutHook = () => {
   const [isDarkMode, setMode] = useState<boolean | undefined>(false);
 
-  const theme:any = isDarkMode ? darkTheme : lightTheme;
+  const theme: any = isDarkMode ? darkTheme : lightTheme;
 
   return {
     isDarkMode,
@@ -29,6 +33,7 @@ function MyApp({
   Component, pageProps,
 }: AppProps) {
   const { theme } = useLayoutHook();
+  const { classes } = useGetStyles();
   React.useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
@@ -36,6 +41,12 @@ function MyApp({
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
+
+  // =============================
+  // global state
+  // =============================
+  const globalState = {
+  };
 
   return (
     <>
@@ -58,9 +69,25 @@ function MyApp({
           theme={theme}
         >
           <CssBaseline />
-          <Component
-            {...pageProps}
-          />
+          <GlobalContext.Provider
+            value={globalState}
+          >
+            <Component
+              {...pageProps}
+            />
+            <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              className={classes.toast}
+            />
+          </GlobalContext.Provider>
         </ThemeProvider>
       </ApolloProvider>
     </>

@@ -8,7 +8,7 @@ import { Button } from '@material-ui/core';
 import { footerLinks } from './utils';
 import { useFooterHook } from './hooks';
 import { useGetStyles } from './styles';
-import { Donate } from './components';
+// import { Donate } from './components';
 
 const Footer = () => {
   const { t } = useTranslation(['common']);
@@ -80,15 +80,20 @@ const Footer = () => {
           <SocialMedia />
           <div>
             <p className="footer__donate--excerpt">{t('common:donateExcerpt')}</p>
-            <Donate open={open} handleClose={handleClose} />
-            <Button
+            {/* <Donate open={open} handleClose={handleClose} /> */}
+            {/* <Button
               className="footer__donate-button"
               variant="contained"
               color="primary"
-              onClick={handleOpen}
+              // onClick={handleOpen}
             >
               {t('common:donate')}
-            </Button>
+            </Button> */}
+            <Link key="donate" href="/donate">
+              <a className="footer__donate-button">
+                {t('common:donate')}
+              </a>
+            </Link>
           </div>
         </div>
       </div>
