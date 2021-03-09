@@ -1,6 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
-import { useTranslation } from 'i18n';
+import {
+  Trans, useTranslation,
+} from 'i18n';
 import { Layout } from '@components';
 import { Grid } from '@material-ui/core';
 import { useGetStyles } from './styles';
@@ -21,7 +23,7 @@ const Faq = () => {
             &nbsp;
             <a
               className={classnames('mail-link')}
-              href="mailto:support@forbole.com"
+              href="mailto:info@forbole.com"
             >
               {t('email')}
             </a>
@@ -39,7 +41,19 @@ const Faq = () => {
                             {t(question.question)}
                           </h2>
                           <p className={classnames('details')}>
-                            {t(question.ans)}
+                            <Trans
+                              i18nKey={t(question.ans)}
+                              components={{
+                                ita:
+  <a
+    href={t('video')}
+    target="_blank"
+    rel="noreferrer"
+  >
+    link
+  </a>,
+                              }}
+                            />
                             {question.details?.map((details, index) => {
                               return (
                                 <div key={index} className={classnames('details', 'details_container')}>
