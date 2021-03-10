@@ -44,9 +44,17 @@ const Faq = () => {
                             <Trans
                               i18nKey={t(question.ans)}
                               components={{
-                                ita:
+                                youtube:
   <a
     href={t('video')}
+    target="_blank"
+    rel="noreferrer"
+  >
+    link
+  </a>,
+                                staking:
+  <a
+    href={t('here')}
     target="_blank"
     rel="noreferrer"
   >

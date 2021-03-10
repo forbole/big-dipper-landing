@@ -17,7 +17,7 @@ export const useGetStyles = () => {
         marginTop: '4rem',
       },
       '& .topic__title': {
-        fontSize: '1.5rem',
+        fontSize: '1.75rem',
         fontWeight: 500,
         margin: '1rem 0 0.5rem',
       },
