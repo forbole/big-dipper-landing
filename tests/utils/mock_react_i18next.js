@@ -44,7 +44,7 @@ useMock.i18n = {
 };
 
 module.exports = {
-  Trans: ({ children }) => renderNodes(children),
+  Trans: ({ children }) => renderNodes(children ? children : ""),
   Translation: ({ children }) => children((k) => k, {
     i18n: {
     },
