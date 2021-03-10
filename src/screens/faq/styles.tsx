@@ -17,15 +17,15 @@ export const useGetStyles = () => {
         marginTop: '4rem',
       },
       '& .topic__title': {
-        fontSize: '1.5rem',
-        fontWeight: 400,
-        margin: '0rem 0 0.5rem',
+        fontSize: '1.75rem',
+        fontWeight: 500,
+        margin: '1rem 0 0.5rem',
       },
       '&.paragraph': {
         marginTop: '2rem',
       },
       '& .context': {
-        margin: '1rem 0 1rem 0',
+        margin: '1rem 0 2rem 0',
 
         marginBottom: theme?.palette?.custom?.gutters?.small,
         '& .mail-link': {
@@ -34,19 +34,20 @@ export const useGetStyles = () => {
       },
       '& .subTitle': {
         marginTop: '0',
-        marginBottom: theme?.palette?.custom?.gutters?.small,
-        fontWeight: 400,
-        fontSize: '1.25rem',
+        marginBottom: '5px',
+        fontWeight: 500,
+        fontSize: '1rem',
         [getMinMediaQuery(theme.breakpoints.values.tablet)]: {
-          fontSize: '1.25rem',
+          fontSize: '1rem',
         },
         [getMinMediaQuery(theme.breakpoints.values.desktop)]: {
-          fontSize: '1.375rem',
+          fontSize: '1rem',
         },
       },
       '& .details': {
         margin: '0',
         marginBottom: theme.palette.custom.margins.large,
+        color: '#414141',
         whiteSpace: 'pre-line',
         '&.details_container': {
           margin: '0.3rem 0 0 2rem',

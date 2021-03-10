@@ -25,6 +25,10 @@ const getFaqDetails = () => {
           ans: 'stakingAnswer',
         },
         {
+          question: 'stakingRewardQuestion',
+          ans: 'stakingRewardAnswer',
+        },
+        {
           question: 'stakingActionsQuestion',
           ans: 'stakingActionsAnswer',
         },
@@ -37,6 +41,10 @@ const getFaqDetails = () => {
     {
       topic: 'validators',
       questions: [
+        {
+          question: 'delegateQuestion',
+          ans: 'delegateAnswer',
+        },
         {
           question: 'validatorsQuestion',
           ans: 'validatorsAnswer',
