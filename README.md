@@ -3,12 +3,7 @@
 A simple boilerplate ripped off of `big dipper default interface`
 
 ## Quick Start
-If you don't want to clone this repo, in your new project repo.
 ```
-git init
-git remote add boilermaker https://github.com/forbole/next-material-graphql-boilerplate.git
-git fetch boilermaker
-git merge boilermaker/master
 npm i
 npm run dev
 ```
