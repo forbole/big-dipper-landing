@@ -86,7 +86,7 @@ export const useGetStyles = () => {
           },
           [getMinMediaQuery(theme?.breakpoints?.values?.desktop)]: {
             '&.footer': {
-              padding: '3rem 2rem 5rem',
+              padding: '2.5rem 2rem',
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
             },
@@ -98,6 +98,7 @@ export const useGetStyles = () => {
             },
             '& h3': {
               fontSize: '1.125rem',
+              marginTop: 0,
             },
             '& .footer__social': {
               justifyContent: 'flex-end',
