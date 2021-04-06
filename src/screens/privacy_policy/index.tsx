@@ -7,8 +7,8 @@ import { Layout } from '@components';
 import { useGetStyles } from './styles';
 import getTnCDetails from './utils';
 
-const TermsAndConditions = () => {
-  const { t } = useTranslation(['t&c']);
+const PrivacyPolicy = () => {
+  const { t } = useTranslation(['privacy_policy']);
   const { classes } = useGetStyles();
   const items = getTnCDetails();
 
@@ -144,4 +144,4 @@ const TermsAndConditions = () => {
   );
 };
 
-export default TermsAndConditions;
+export default PrivacyPolicy;

@@ -1,9 +1,9 @@
 import TermsAndConditions from '@src/screens/terms_and_conditions';
 
-const termsAndConditionsPage = () => {
+const TermsAndConditionsPage = () => {
   return (
     <TermsAndConditions />
   );
 };
 
-export default termsAndConditionsPage;
+export default TermsAndConditionsPage;

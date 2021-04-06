@@ -1,9 +1,9 @@
 import Faq from '@screens/faq';
 
-const faqPage = () => {
+const FaqPage = () => {
   return (
     <Faq />
   );
 };
 
-export default faqPage;
+export default FaqPage;
