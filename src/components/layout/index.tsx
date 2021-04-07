@@ -22,7 +22,7 @@ const Layout = (props:any) => {
   let currentPath = '';
 
   if (typeof window === 'object') {
-    baseUrl = window?.location?.origin || '';
+    baseUrl = window?.location?.origin || process.env.NEXT_PUBLIC_URL;
     currentPath = window?.location?.href || '';
   }
 
