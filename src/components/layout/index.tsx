@@ -18,11 +18,11 @@ const Layout = (props:any) => {
   // ============================
   // Meta Tags
   // ============================
-  let baseUrl = '';
+  let baseUrl = process.env.NEXT_PUBLIC_URL;
   let currentPath = '';
 
   if (typeof window === 'object') {
-    baseUrl = window?.location?.origin || process.env.NEXT_PUBLIC_URL;
+    baseUrl = window?.location?.origin;
     currentPath = window?.location?.href || '';
   }
 
