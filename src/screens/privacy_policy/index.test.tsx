@@ -1,25 +1,25 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import TermsAndConditions from '@src/screens/terms_and_conditions';
+import PrivacyPolicy from '@src/screens/privacy_policy';
 import { lightTheme } from '@styles';
 import { WithMockMaterialTheme } from '@tests/utils/mock_material_theme';
 import { createMuiTheme } from '@material-ui/core/styles';
 
-describe('TermsAndConditions', () => {
+describe('PrivacyPolicy', () => {
   it('it renders', () => {
     const wrapper = mount(
       WithMockMaterialTheme({
-        component: <TermsAndConditions />,
+        component: <PrivacyPolicy />,
         theme: createMuiTheme(lightTheme),
       }),
     );
 
     expect(wrapper).not.toBeNull();
     expect(
-      wrapper.find('h2').first().text(),
-    ).toBe('termsAndConditions');
+      wrapper.find('h1').first().text(),
+    ).toBe('privacyPolicy');
     expect(
-      wrapper.find('.text').first().text(),
-    ).toBe('Important information regarding your rights and obligations while using the Services');
+      wrapper.find('p').first().text(),
+    ).toBe('intro');
   });
 });

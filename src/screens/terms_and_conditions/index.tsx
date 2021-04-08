@@ -36,7 +36,7 @@ const TermsAndConditions = () => {
                 <div key={i} className={classnames(classes.text, 'container')}>
                   <p className={classnames(classes.text, 'content__container')}>
                     ●
-                    <p className={classnames(classes.text, 'text')}>
+                    <span className={classnames(classes.text, 'text')}>
                       <Trans
                         i18nKey={t(x.topic)}
                         components={{
@@ -56,7 +56,7 @@ const TermsAndConditions = () => {
   </a>,
                         }}
                       />
-                    </p>
+                    </span>
                   </p>
                 </div>
               );
@@ -125,7 +125,7 @@ const TermsAndConditions = () => {
             <h1 className="tc__subTitle">{t('contactUs')}</h1>
             <p className={classnames(classes.text, 'detail')}>
               {t('contactUsDetail')}
-              <p className={classnames(classes.text, 'content__container')}>
+              <span className={classnames(classes.text, 'content__container', 'mail-link')}>
                 ●
                 {' '}
                 {t('byEmail')}
@@ -135,7 +135,7 @@ const TermsAndConditions = () => {
                 >
                   {t('email')}
                 </a>
-              </p>
+              </span>
             </p>
           </div>
         </div>

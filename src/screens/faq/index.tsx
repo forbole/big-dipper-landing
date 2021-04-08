@@ -17,7 +17,7 @@ const Faq = () => {
     <Layout className={classnames(classes.root)}>
       <div className="max-width__parent" id="about">
         <div className="faq__container max-width__content">
-          <h2 className="faq__title">{t('FAQ')}</h2>
+          <h1 className="faq__title">{t('FAQ')}</h1>
           <p className={classnames('context')}>
             {t('context')}
             &nbsp;
@@ -64,10 +64,10 @@ const Faq = () => {
                             />
                             {question.details?.map((details, index) => {
                               return (
-                                <div key={index} className={classnames('details', 'details_container')}>
+                                <span key={index} className={classnames('details', 'details_container')}>
                                   ●
-                                  <p className={classnames('details', 'text')}>{t(details.content)}</p>
-                                </div>
+                                  <span className={classnames('details', 'text')}>{t(details.content)}</span>
+                                </span>
                               );
                             })}
                             {t(question.conclusion)}

@@ -16,10 +16,10 @@ describe('TermsAndConditions', () => {
 
     expect(wrapper).not.toBeNull();
     expect(
-      wrapper.find('h2').first().text(),
+      wrapper.find('h1').first().text(),
     ).toBe('termsAndConditions');
     expect(
-      wrapper.find('.text').first().text(),
-    ).toBe('Important information regarding your rights and obligations while using the Services');
+      wrapper.find('h2').first().text(),
+    ).toBe('interpretation');
   });
 });

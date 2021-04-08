@@ -25,7 +25,7 @@ const Home = () => {
       {/* ============================= */}
       <div className="max-width__parent" id="about">
         <div className="about__container max-width__content">
-          <h2 className="about__title">{t('aboutBigDipper')}</h2>
+          <h1 className="about__title">{t('aboutBigDipper')}</h1>
           <p className="about__content">{t('aboutContent')}</p>
           <p className="about__media">{t('socialMediaVisit')}</p>
           <SocialMedia className="home-page__media" />

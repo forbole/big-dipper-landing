@@ -48,6 +48,9 @@ export const useGetStyles = () => {
       '&.text': {
         margin: '0 0 0rem 0.5rem',
       },
+      '&.mail-link': {
+        paddingTop: '1rem',
+      },
     },
   });
 
