@@ -21,6 +21,7 @@ const port = process.env.PORT;
     server.all('*', (req: Request, res: Response) => {
       return handle(req, res);
     });
+
     server.listen(port, (err?: any) => {
       if (err) throw err;
       console.log('> Blast Off Ready On:');
