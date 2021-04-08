@@ -6,16 +6,13 @@ export const useGetStyles = () => {
   const theme: any = useTheme();
   const useStyles = makeStyles({
     root: {
+      fontSize: '1rem',
       whiteSpace: 'pre-line',
+      '& h1, & h2, & h3': {
+        fontWeight: 500,
+      },
       '& .tc__container': {
-        padding: '2rem 1rem',
-      },
-      '& .tc__title': {
-        marginTop: '4rem',
-      },
-      '& .tc__subTitle': {
-        margin: 0,
-        marginTop: '2rem',
+        padding: '4rem 1rem',
       },
       [getMinMediaQuery(theme?.breakpoints?.values?.desktop)]: {
         '& .max-width__parent': {
@@ -27,20 +24,12 @@ export const useGetStyles = () => {
           width: '100%',
           maxWidth: theme?.breakpoints?.values?.maxWidth,
         },
-        '& .tc__title': {
-          fontSize: '2rem',
-        },
         '& .tc__container': {
           padding: '3.5rem 1rem',
         },
       },
     },
     text: {
-      fontSize: '1rem',
-      '&.content__container': {
-        marginLeft: '1rem',
-        display: 'flex',
-      },
       '&.topic__title': {
         fontWeight: 500,
         whiteSpace: 'pre-line',
@@ -48,9 +37,11 @@ export const useGetStyles = () => {
       '&.text': {
         margin: '0 0 0rem 0.5rem',
       },
-      '&.mail-link': {
-        paddingTop: '1rem',
-      },
+    },
+    content__container: {
+      margin: '1rem 0',
+      marginLeft: '1rem',
+      display: 'flex',
     },
   });
 

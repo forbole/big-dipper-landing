@@ -34,7 +34,7 @@ export const useGetStyles = () => {
           },
           '& .about__title, & .networks__title': {
             fontSize: '1.75rem',
-            fontWeight: 400,
+            fontWeight: 500,
             margin: 0,
           },
           '& .about__content': {
