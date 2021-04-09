@@ -8,10 +8,13 @@ export const useGetStyles = () => {
     root: {
       fontSize: '1rem',
       '& .faq__container': {
-        padding: '4rem 1rem',
+        padding: '2rem 1rem',
       },
       '& .faq__title': {
-        fontWeight: 500,
+        fontSize: '1.75rem',
+        fontWeight: 400,
+        margin: 0,
+        marginTop: '4rem',
       },
       '& .topic__title': {
         fontSize: '1.75rem',

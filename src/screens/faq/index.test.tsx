@@ -16,7 +16,7 @@ describe('Faq', () => {
 
     expect(
       wrapper.find('h2').first().text(),
-    ).toBe('blockchain');
+    ).toBe('FAQ');
     expect(
       wrapper.find('p').find('.mail-link').first().text(),
     ).toBe('email');

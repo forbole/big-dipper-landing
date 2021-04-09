@@ -1,9 +1,9 @@
 import Donate from '@screens/donate';
 
-const DonatePage = () => {
+const faqPage = () => {
   return (
     <Donate />
   );
 };
 
-export default DonatePage;
+export default faqPage;
