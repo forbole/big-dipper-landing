@@ -11,7 +11,10 @@ export const useGetStyles = () => {
       '& h1, & h2, & h3': {
         fontWeight: 500,
       },
-      '& .tc__container': {
+      '& .pp__title': {
+        marginTop: '4rem',
+      },
+      '& .pp__container': {
         padding: '4rem 1rem',
       },
       [getMinMediaQuery(theme?.breakpoints?.values?.desktop)]: {

@@ -7,6 +7,9 @@ export const useGetStyles = () => {
   const useStyles = makeStyles({
     root: {
       whiteSpace: 'pre-line',
+      '& h1, & h2, & h3': {
+        fontWeight: 500,
+      },
       '& .tc__container': {
         padding: '2rem 1rem',
       },

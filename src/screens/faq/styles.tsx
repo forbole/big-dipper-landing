@@ -12,6 +12,7 @@ export const useGetStyles = () => {
       },
       '& .faq__title': {
         fontWeight: 500,
+        marginTop: '4rem',
       },
       '& .topic__title': {
         fontSize: '1.75rem',
