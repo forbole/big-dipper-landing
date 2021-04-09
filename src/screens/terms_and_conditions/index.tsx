@@ -129,6 +129,7 @@ const TermsAndConditions = () => {
                 ●
                 {' '}
                 {t('byEmail')}
+                &nbsp;
                 <a
                   className={classnames('mail-link')}
                   href="mailto:info@forbole.com"
