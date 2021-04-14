@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/styles';
 
-export const useGetStyles = ( color ) => {
+export const useGetStyles = (color) => {
   const useStyles = makeStyles({
     root: {
       '& .selected-button': {
