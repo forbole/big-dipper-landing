@@ -18,7 +18,7 @@ const Donate = () => {
   const { handleCopy } = useDonateHook(t);
 
   return (
-    <Layout className={classnames(classes.root)}>
+    <Layout className={classnames(classes.root)} color="grey">
       <div className="max-width__parent" id="about">
         <div className="donate__container max-width__content">
           <h2 className="donate__title">{t('donation')}</h2>

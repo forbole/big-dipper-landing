@@ -14,7 +14,7 @@ const Faq = () => {
   const faqData = getFaqDetails();
 
   return (
-    <Layout className={classnames(classes.root)}>
+    <Layout className={`${classes.root} home-page__container`} color="grey">
       <div className="max-width__parent" id="about">
         <div className="faq__container max-width__content">
           <h1 className="faq__title">{t('FAQ')}</h1>

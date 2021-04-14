@@ -13,7 +13,11 @@ import { useLanguagesHook } from './hooks';
 import { useGetStyles } from './styles';
 import { languages } from './utils';
 
-const Languages = () => {
+export interface LanguagesProps {
+  color?: string,
+}
+
+const Languages = (prop: LanguagesProps) => {
   const {
     anchorEl,
     handleOpen,
@@ -22,7 +26,7 @@ const Languages = () => {
     selected,
   } = useLanguagesHook();
 
-  const { classes } = useGetStyles();
+  const { classes } = useGetStyles(prop.color);
   return (
     <div className={classnames(classes.root, 'languages')}>
       <div
@@ -30,7 +34,7 @@ const Languages = () => {
         role="button"
         className={classnames('selected-button')}
       >
-        <Language />
+        <Language color="primary" />
         {selected.value}
       </div>
       <Popper
