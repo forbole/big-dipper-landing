@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
   } = getPrivacyDetails();
 
   return (
-    <Layout className={classes.root}>
+    <Layout className={classes.root} color="grey">
       <div className={classnames(classes.root, 'max-width__parent')} id="about">
         <div className="pp__container max-width__content">
           <Paragraphy title={t('privacyPolicy')} subTitle={null} point={null} paragraph={t('intro')} titleClassName="pp__title" />

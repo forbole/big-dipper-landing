@@ -13,8 +13,7 @@ const TermsAndConditions = () => {
   const items = getTnCDetails();
 
   return (
-    <Layout className={`${classes.root} home-page__container`}>
-
+    <Layout className={`${classes.root} home-page__container`} color="grey">
       <div className="max-width__parent" id="about">
         <div className="tc__container max-width__content">
           <h1 className="tc__title">{t('termsAndConditions')}</h1>

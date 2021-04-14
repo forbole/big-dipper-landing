@@ -8,10 +8,17 @@ import {
 } from './components';
 import { useGetStyles } from './styles';
 
-const Layout = (props:any) => {
+export interface LayoutProps {
+  children: any,
+  className: string,
+  color?: string,
+}
+
+const Layout = (props:LayoutProps) => {
   const {
     children,
     className,
+    color,
   } = props;
   const { t } = useTranslation(['home', 'common']);
   const { classes } = useGetStyles();
@@ -79,7 +86,7 @@ const Layout = (props:any) => {
               <Logo className="nav__logo" />
             </a>
           </Link>
-          <Languages />
+          <Languages color={color} />
         </div>
         {children}
         <Footer />
