@@ -23,34 +23,26 @@ jobs:
           echo PORT=${{ secrets.PORT }} >> .env
           echo NEXT_PUBLIC_URL=${{ secrets.NEXT_PUBLIC_URL }} >> .env
           cat .env
-      # - name: Set up Docker Buildx
-      #   uses: docker/setup-buildx-action@v1
-      # - name: Login to DockerHub
-      #   # if: github.event_name != 'pull_request'
-      #   uses: docker/login-action@v1
-      #   with:
-      #     username: ${{ secrets.DOCKER_USERNAME }}
-      #     password: ${{ secrets.DOCKER_PASSWORD }}
-      # - name: Build and push
-      #   uses: docker/build-push-action@v2
-      #   with:
-      #     context: .
-      #     file: ./Dockerfile
-      #     push: true # wingman remove
-      #     # push: ${{ github.event_name != 'pull_request' }}
-      #     tags: forbole/big-dipper-landing:staging
-      #     labels: |
-      #       org.opencontainers.image.source=${{ github.event.repository.html_url }}
-      #       org.opencontainers.image.created=${{ steps.prep.outputs.created }}
-      #       org.opencontainers.image.revision=${{ github.sha }}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to DockerHub
+        # if: github.event_name != 'pull_request'
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true # wingman remove
+          # push: ${{ github.event_name != 'pull_request' }}
+          tags: forbole/big-dipper-landing:test
+          labels: |
+            org.opencontainers.image.source=${{ github.event.repository.html_url }}
+            org.opencontainers.image.created=${{ steps.prep.outputs.created }}
+            org.opencontainers.image.revision=${{ github.sha }}
       - name: curl
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"parameters":{"tag": "staging"}}' -k ${{ secrets.WEBHOOK_URL }} -u "deploy:${{ secrets.WEBHOOK_SECRET }}"
-
-      # - name: Invoke deployment hook
-      #   uses: distributhor/workflow-webhook@v1
-      #   env:
-      #     webhook_type: 'json-extended'
-      #     webhook_url: ${{ secrets.WEBHOOK_URL }}
-      #     webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
-      #     data: '{"parameters": {"tag": "staging"}}'
+          curl -X POST -H "Content-Type: application/json" -d '{"parameters":{"tag": "test"}}' -k ${{ secrets.WEBHOOK_URL }} -u "deploy:${{ secrets.WEBHOOK_SECRET }}"
