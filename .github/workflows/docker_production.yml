@@ -26,7 +26,7 @@ jobs:
           if [[ $GITHUB_REF == refs/tags/* ]]; then
             VERSION=${GITHUB_REF#refs/tags/}
           fi
-          TAGS="${DOCKER_IMAGE}:${VERSION},${DOCKER_IMAGE}:test,${DOCKER_IMAGE}:sha-${GITHUB_SHA::8}"
+          TAGS="${DOCKER_IMAGE}:${VERSION},${DOCKER_IMAGE}:somewhere${DOCKER_IMAGE}:sha-${GITHUB_SHA::8}"
           echo ::set-output name=version::${VERSION}
           echo ::set-output name=tags::${TAGS}
           echo ::set-output name=sha::sha-${GITHUB_SHA::8}
@@ -54,6 +54,6 @@ jobs:
             org.opencontainers.image.revision=${{ github.sha }}
       - name: Update image 🌐
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"parameters":{"tag": "test"}}' -k ${{ secrets.WEBHOOK_URL }} -u "deploy:${{ secrets.WEBHOOK_SECRET }}"
+          curl -X POST -H "Content-Type: application/json" -d '{"parameters":{"tag": "somewhere"}}' -k ${{ secrets.WEBHOOK_URL }} -u "deploy:${{ secrets.WEBHOOK_SECRET }}"
 
 
