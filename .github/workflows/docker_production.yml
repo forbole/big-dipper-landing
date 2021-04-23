@@ -51,5 +51,5 @@ jobs:
             org.opencontainers.image.created=${{ steps.prep.outputs.created }}
             org.opencontainers.image.revision=${{ github.sha }}
       - name: curl
-          run: |
-            curl -X POST -H "Content-Type: application/json" -d '{"parameters":{"tag": ${{ VERSION }} }}' -k ${{ secrets.WEBHOOK_URL }} -u "deploy:${{ secrets.WEBHOOK_SECRET }}"
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '{"parameters":{"tag": ${{ VERSION }} }}' -k ${{ secrets.WEBHOOK_URL }} -u "deploy:${{ secrets.WEBHOOK_SECRET }}"
