@@ -8,7 +8,6 @@ export const useGetStyles = () => {
     return (
       createStyles({
         root: {
-          background: 'green',
           fontSize: '1rem',
           '& .home-page__hero': {
             minHeight: '70vh',
