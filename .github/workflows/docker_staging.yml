@@ -44,10 +44,9 @@ jobs:
             org.opencontainers.image.created=${{ steps.prep.outputs.created }}
             org.opencontainers.image.revision=${{ github.sha }}
       - name: curl
-        uses: wei/curl@master
-        with:
-          args: |
-            curl -X POST -H "Content-Type: application/json" -d '{"parameters":{"tag": "staging"}}' -k ${{ secrets.WEBHOOK_URL }} -u "deploy:${{ secrets.WEBHOOK_SECRET }}"
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '{"parameters":{"tag": "staging"}}' -k ${{ secrets.WEBHOOK_URL }} -u "deploy:${{ secrets.WEBHOOK_SECRET }}"
+
       # - name: Invoke deployment hook
       #   uses: distributhor/workflow-webhook@v1
       #   env:
