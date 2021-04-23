@@ -37,11 +37,18 @@ jobs:
           context: .
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: forbole/big-dipper-landing:test
+          tags: forbole/big-dipper-landing:staging
           labels: |
             org.opencontainers.image.source=${{ github.event.repository.html_url }}
             org.opencontainers.image.created=${{ steps.prep.outputs.created }}
             org.opencontainers.image.revision=${{ github.sha }}
       # - name: curl
       #   run: |
-      #     curl -X POST -H "Content-Type: application/json" -d '{"parameters":{"tag": "test"}}' -k ${{ secrets.WEBHOOK_URL }} -u "deploy:${{ secrets.WEBHOOK_SECRET }}"
+          # curl -X POST -H "Content-Type: application/json" -d '{"parameters":{"tag": "test"}}' -k ${{ secrets.WEBHOOK_URL }} -u "deploy:${{ secrets.WEBHOOK_SECRET }}"
+
+
+
+# curl -X POST -H "Content-Type: application/json" \
+#             -d "{\"parameters\":{\"tag\": \"sha-${GITHUB_SHA::8}\"}}" \
+#             -k ${{ secrets.WEBHOOK_URL }} \
+#             -u "deploy:${{ secrets.WEBHOOK_SECRET }}"
