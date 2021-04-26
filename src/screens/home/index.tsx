@@ -18,7 +18,9 @@ const Home = () => {
       {/* hero */}
       {/* ============================= */}
       <div className="home-page__hero">
-        <h1 className="hero__title">{t('title')}</h1>
+        <h1 className="hero__title">
+          {t('title')}
+        </h1>
       </div>
       {/* ============================= */}
       {/* about */}
