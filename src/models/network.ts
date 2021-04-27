@@ -14,6 +14,7 @@ const banners = {
   DESMOS: 'images/networks/desmos.png',
   'Fetch.AI': 'images/networks/fetch-ai.png',
   Celo: 'images/networks/celo.png',
+  Flow: 'images/networks/flow.png',
 };
 
 export type Link = {
