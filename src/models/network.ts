@@ -5,13 +5,16 @@ const banners = {
   'Cosmos Hub': '/images/networks/cosmos.png',
   IRISnet: 'images/networks/IRISnet.png',
   'e-Money': 'images/networks/e-money.png',
-  IOV: 'images/networks/iov.png',
+  'Starname (IOV)': 'images/networks/iov.png',
   Kava: 'images/networks/kava.png',
   'Band Protocol': 'images/networks/band-protocol.png',
   LikeCoin: 'images/networks/likecoin.png',
   Akash: 'images/networks/akash.png',
   StraightEdge: 'images/networks/straight-edge.png',
-  Desmos: 'images/networks/desmos.png',
+  DESMOS: 'images/networks/desmos.png',
+  'Fetch.AI': 'images/networks/fetch-ai.png',
+  Celo: 'images/networks/celo.png',
+  Flow: 'images/networks/flow.png',
 };
 
 export type Link = {

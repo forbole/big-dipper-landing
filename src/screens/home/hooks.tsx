@@ -6,7 +6,7 @@ import { Network } from '@models';
 import { formatNetworkData } from './utils';
 
 export const useHomeHook = () => {
-  const NETWORK_LIST_API = 'https://gist.githubusercontent.com/kwunyeung/8be4598c77c61e497dfc7220a678b3ee/raw/bd-networks.json';
+  const NETWORK_LIST_API = 'https://raw.githubusercontent.com/forbole/big-dipper-networks/main/networks.json';
 
   const [networks, setNetworks] = useState<Network[]>([]);
 
@@ -16,6 +16,7 @@ export const useHomeHook = () => {
       try {
         const results = await axios.get(NETWORK_LIST_API);
         data = results?.data ?? [];
+        console.log(data, 'data');
       } catch (error) {
         console.error(error);
       }
