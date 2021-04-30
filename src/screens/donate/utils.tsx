@@ -28,12 +28,12 @@ const getDonation = () => {
     },
     {
       coin: 'ETH',
-      address: formatAddress('xec3AaC5023E0C9E2a76A223E4e312f275c76Cd77'),
+      address: formatAddress('0x8CAb9F3fC6bBBD819050365627FC6B79d0ea73e6'),
       image: '',
     },
     {
       coin: 'BTC',
-      address: formatAddress('1HrTuvS83VoUVA79wTifko69ziWTjEXzQS'),
+      address: formatAddress('bc1qye4k27zsn5nehzded6jwsvzg8qd6kgvxyhckts'),
       image: '',
     },
   ];
