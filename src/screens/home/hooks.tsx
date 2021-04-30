@@ -16,7 +16,6 @@ export const useHomeHook = () => {
       try {
         const results = await axios.get(NETWORK_LIST_API);
         data = results?.data ?? [];
-        console.log(data, 'data');
       } catch (error) {
         console.error(error);
       }
