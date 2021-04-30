@@ -1,22 +1,3 @@
-/**
- * Helper list to keep track of banner list
- */
-const banners = {
-  'Cosmos Hub': '/images/networks/cosmos.png',
-  IRISnet: 'images/networks/IRISnet.png',
-  'e-Money': 'images/networks/e-money.png',
-  'Starname (IOV)': 'images/networks/iov.png',
-  Kava: 'images/networks/kava.png',
-  'Band Protocol': 'images/networks/band-protocol.png',
-  LikeCoin: 'images/networks/likecoin.png',
-  Akash: 'images/networks/akash.png',
-  StraightEdge: 'images/networks/straight-edge.png',
-  DESMOS: 'images/networks/desmos.png',
-  'Fetch.AI': 'images/networks/fetch-ai.png',
-  Celo: 'images/networks/celo.png',
-  Flow: 'images/networks/flow.png',
-};
-
 export type Link = {
   chainId: string;
   url: string;
@@ -75,7 +56,7 @@ class BigDipperNetwork {
       other,
       name: data.name,
       logo: data.logo,
-      banner: banners[data.name],
+      banner: data.cover,
     });
   }
 }
