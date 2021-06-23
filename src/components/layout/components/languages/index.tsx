@@ -17,7 +17,7 @@ export interface LanguagesProps {
   color?: string,
 }
 
-const Languages = (prop: LanguagesProps) => {
+const Languages = ({ color }: LanguagesProps) => {
   const {
     anchorEl,
     handleOpen,
@@ -26,7 +26,7 @@ const Languages = (prop: LanguagesProps) => {
     selected,
   } = useLanguagesHook();
 
-  const { classes } = useGetStyles(prop.color);
+  const { classes } = useGetStyles(color);
   return (
     <div className={classnames(classes.root, 'languages')}>
       <div
