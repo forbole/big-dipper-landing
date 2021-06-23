@@ -56,11 +56,35 @@ export const useGetStyles = () => {
           marginBottom: '0.5rem',
         },
       },
+      '& .menu_title': {
+        fontWeight: 500,
+        fontSize: '1.25rem',
+        marginTop: '2rem',
+        textDecoration: 'none',
+        color: '#414141',
+      },
+      '& .menu_subtitle': {
+        marginTop: '0.5rem',
+        textDecoration: 'none',
+        color: '#414141',
+      },
+      '& a': {
+        textDecoration: 'none',
+        color: '#414141',
+      },
+      '& .sticky_box': {
+        marginTop: '100px',
+        width: '20%',
+        display: 'none',
+        [getMinMediaQuery(theme.breakpoints.values.desktop)]: {
+          display: 'block',
+        },
+      },
       [getMinMediaQuery(theme?.breakpoints?.values?.desktop)]: {
         '& .max-width__parent': {
-          display: 'flex',
-          alignItems: 'center',
           justifyContent: 'center',
+          display: 'flex',
+          alignItems: 'flex-start',
         },
         '& .max-width__content': {
           width: '100%',
