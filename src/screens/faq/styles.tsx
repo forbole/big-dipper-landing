@@ -15,23 +15,27 @@ export const useGetStyles = () => {
         marginTop: '4rem',
       },
       '& .topic__title': {
-        fontSize: '1.75rem',
+        fontSize: '0rem',
         fontWeight: 500,
         margin: '1rem 0 0.5rem',
+        visibility: 'hidden',
       },
-      '&.paragraph': {
-        marginTop: '2rem',
+      '& .paragraph': {
+        marginTop: '1.25rem',
+        paddingLeft: '6rem',
+      },
+      '& .container': {
+        display: 'flex',
+        paddingTop: '20px',
       },
       '& .context': {
         margin: '1rem 0 2rem 0',
-
         marginBottom: theme?.palette?.custom?.gutters?.small,
         '& .mail-link': {
           color: theme.palette.custom.fonts.fontFive,
         },
       },
       '& .subTitle': {
-        marginTop: '0',
         marginBottom: '5px',
         fontWeight: 500,
         fontSize: '1rem',
@@ -58,7 +62,7 @@ export const useGetStyles = () => {
       },
       '& .menu_title': {
         fontWeight: 500,
-        fontSize: '1.25rem',
+        fontSize: '1rem',
         marginTop: '2rem',
         textDecoration: 'none',
         color: '#414141',
@@ -72,9 +76,13 @@ export const useGetStyles = () => {
         textDecoration: 'none',
         color: '#414141',
       },
+      '& h3': {
+        width: 'max-content',
+        marginRight: '2rem',
+        fontSize: '1.25rem',
+      },
       '& .sticky_box': {
-        marginTop: '100px',
-        width: '20%',
+        paddingLeft: '0',
         display: 'none',
         [getMinMediaQuery(theme.breakpoints.values.desktop)]: {
           display: 'block',
