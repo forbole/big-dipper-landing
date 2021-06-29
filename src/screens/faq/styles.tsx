@@ -21,7 +21,7 @@ export const useGetStyles = () => {
         visibility: 'hidden',
       },
       '& .paragraph': {
-        marginTop: '1.25rem',
+        marginTop: '0.5rem',
         paddingLeft: '6rem',
       },
       '& .container': {
@@ -48,7 +48,7 @@ export const useGetStyles = () => {
       },
       '& .details': {
         margin: '0',
-        marginBottom: theme.palette.custom.margins.large,
+        marginBottom: '4rem',
         color: '#414141',
         whiteSpace: 'pre-line',
         '&.details_container': {

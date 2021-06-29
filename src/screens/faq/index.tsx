@@ -4,7 +4,6 @@ import {
   Trans, useTranslation,
 } from 'i18n';
 import { Layout } from '@components';
-import { Grid } from '@material-ui/core';
 import { useGetStyles } from './styles';
 import getFaqDetails from './utils';
 
@@ -71,16 +70,14 @@ const Faq = () => {
               </div>
             </div>
             <div className={classnames('paragraph')}>
-              {faqData.map((x) => {
+              {faqData.map((x, i) => {
                 return (
                   <div key={x.topic}>
-                    <Grid container spacing={2}>
-                      {x.questions.map((question, i) => {
+                    <div>
+                      {x.questions.map((question) => {
                         return (
-                          <Grid
+                          <div
                             key={question.question}
-                            item
-                            xs={12}
                             style={{
                               display: i === clickedParagraph ? 'block' : 'none',
                             }}
@@ -120,10 +117,10 @@ const Faq = () => {
                               })}
                               {t(question.conclusion)}
                             </p>
-                          </Grid>
+                          </div>
                         );
                       })}
-                    </Grid>
+                    </div>
                   </div>
                 );
               })}
