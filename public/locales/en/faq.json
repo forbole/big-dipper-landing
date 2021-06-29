@@ -2,7 +2,7 @@
     "context": "Can’t find answers to your questions? Please contact us at ",
     "email": "info@forbole.com",
     "posQuestion": "What is Proof-of-Stake blockchain?",
-    "posAnswer": "Blockchain is a distributed digital ledger where all transaction data is recorded in multiple nodes to collectively ensure the transparency and accuracy.\n\nProof-of-Stake is a blockchain consensus mechanism to prevent Sybil attacks and incentivise validators to behave correctly. Each validator commits tokens, aka “stakes”, to validate transactions and adds blocks into existence.",
+    "posAnswer": "Blockchain is a distributed digital ledger where all transaction data is recorded in multiple nodes to collectively ensure the transparency and accuracy.\n<boldPoint>Proof-of-Stake</boldPoint> is a blockchain consensus mechanism to prevent Sybil attacks and incentivise validators to behave correctly. Each validator commits tokens, aka “stakes”, to validate transactions and adds blocks into existence.",
     "inflationQuestion": "What is inflation?",
     "inflatinAnswer": "Amount of tokens of a Proof-of-Stake blockchain will grow annually, which is called inflation. The growth rate is the inflation rate of the chain. ",
     "delegatorsQuestion": "Who can be delegators (stakers)?",
