@@ -105,7 +105,12 @@ const Faq = () => {
   >
     link
   </a>,
+                                  boldPoint:
+  <span
+    className={classnames('point')}
+  />,
                                 }}
+
                               />
                               {question.details?.map((details, index) => {
                                 return (

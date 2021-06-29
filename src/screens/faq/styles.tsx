@@ -11,8 +11,10 @@ export const useGetStyles = () => {
         padding: '4rem 1rem',
       },
       '& .faq__title': {
-        fontWeight: 500,
+        fontWeight: 700,
         marginTop: '4rem',
+        fontSize: '2.5rem',
+        marginBottom: '0.5rem',
       },
       '& .topic__title': {
         fontSize: '0rem',
@@ -28,8 +30,13 @@ export const useGetStyles = () => {
         display: 'flex',
         paddingTop: '20px',
       },
+      '& .point': {
+        fontWeight: 500,
+        color: '#000000DE',
+        whiteSpace: 'nowrap',
+      },
       '& .context': {
-        margin: '1rem 0 2rem 0',
+        marginTop: '0rem 0 2rem 0',
         marginBottom: theme?.palette?.custom?.gutters?.small,
         '& .mail-link': {
           color: theme.palette.custom.fonts.fontFive,
@@ -38,13 +45,7 @@ export const useGetStyles = () => {
       '& .subTitle': {
         marginBottom: '5px',
         fontWeight: 500,
-        fontSize: '1rem',
-        [getMinMediaQuery(theme.breakpoints.values.tablet)]: {
-          fontSize: '1rem',
-        },
-        [getMinMediaQuery(theme.breakpoints.values.desktop)]: {
-          fontSize: '1rem',
-        },
+        fontSize: '1.125rem',
       },
       '& .details': {
         margin: '0',
@@ -97,9 +98,6 @@ export const useGetStyles = () => {
         '& .max-width__content': {
           width: '100%',
           maxWidth: theme?.breakpoints?.values?.maxWidth,
-        },
-        '& .faq__title': {
-          fontSize: '2rem',
         },
         '& .faq__container': {
           padding: '3.5rem 1rem',
