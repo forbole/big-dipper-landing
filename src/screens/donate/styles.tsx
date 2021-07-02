@@ -73,6 +73,11 @@ export const useGetStyles = () => {
           padding: '3.5rem 1rem',
         },
       },
+      [getMinMediaQuery(theme?.breakpoints?.values?.maxWidth)]: {
+        '& .max-width__parent': {
+          marginBottom: '20rem',
+        },
+      },
     },
   });
   return {
