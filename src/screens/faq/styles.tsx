@@ -94,6 +94,7 @@ export const useGetStyles = () => {
           justifyContent: 'center',
           display: 'flex',
           alignItems: 'flex-start',
+          minHeight: '70rem',
         },
         '& .max-width__content': {
           width: '100%',
