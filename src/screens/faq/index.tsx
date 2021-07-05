@@ -37,19 +37,17 @@ const Faq = () => {
               <div className="sticky_box">
                 {faqData.map((x, i) => {
                   return (
-                    <>
-                      <h2
-                        role="button"
-                        className="menu_title"
+                    <h2
+                      role="button"
+                      className="menu_title"
                         // role="button"
-                        onClick={() => setClickedParagraph(i)}
-                        style={{
-                          color: i === clickedParagraph ? '#FD3B4C' : 'inherit',
-                        }}
-                      >
-                        {t(x.topic)}
-                      </h2>
-                    </>
+                      onClick={() => setClickedParagraph(i)}
+                      style={{
+                        color: i === clickedParagraph ? '#FD3B4C' : 'inherit',
+                      }}
+                    >
+                      {t(x.topic)}
+                    </h2>
                   );
                 })}
               </div>
@@ -75,26 +73,29 @@ const Faq = () => {
                               <Trans
                                 i18nKey={t(question.ans)}
                                 components={{
-                                  youtube:
-  <a
-    href={t('video')}
-    target="_blank"
-    rel="noreferrer"
-  >
-    link
-  </a>,
-                                  staking:
-  <a
-    href={t('here')}
-    target="_blank"
-    rel="noreferrer"
-  >
-    link
-  </a>,
-                                  boldPoint:
-  <span
-    className={classnames('point')}
-  />,
+                                  youtube: (
+                                    <a
+                                      href={t('video')}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                    >
+                                      link
+                                    </a>
+                                  ),
+                                  staking: (
+                                    <a
+                                      href={t('here')}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                    >
+                                      link
+                                    </a>
+                                  ),
+                                  boldPoint: (
+                                    <span
+                                      className={classnames('point')}
+                                    />
+                                  ),
                                 }}
 
                               />
