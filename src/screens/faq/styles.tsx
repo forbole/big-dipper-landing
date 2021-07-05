@@ -12,7 +12,7 @@ export const useGetStyles = () => {
       },
       '& .faq__title': {
         fontWeight: 700,
-        marginTop: '4rem',
+        // marginTop: '4rem',
         fontSize: '2.5rem',
         marginBottom: '0.5rem',
       },
@@ -23,12 +23,12 @@ export const useGetStyles = () => {
         visibility: 'hidden',
       },
       '& .paragraph': {
-        marginTop: '0.5rem',
-        paddingLeft: '6rem',
+        // marginTop: '0.5rem',
+        // paddingLeft: '6rem',
       },
       '& .container': {
         display: 'flex',
-        paddingTop: '20px',
+        // paddingTop: '20px',
       },
       '& .point': {
         fontWeight: 500,
@@ -64,7 +64,8 @@ export const useGetStyles = () => {
       '& .menu_title': {
         fontWeight: 500,
         fontSize: '1rem',
-        marginTop: '2rem',
+        // marginTop: '2rem',
+        // marginBottom: '2rem',
         textDecoration: 'none',
         color: '#414141',
       },
@@ -78,9 +79,11 @@ export const useGetStyles = () => {
         color: '#414141',
       },
       '& h3': {
-        width: 'max-content',
-        marginRight: '2rem',
         fontSize: '1.25rem',
+        margin: 0,
+      },
+      '& .table-content__wrapper': {
+        width: '30%',
       },
       '& .sticky_box': {
         paddingLeft: '0',
@@ -94,7 +97,7 @@ export const useGetStyles = () => {
           justifyContent: 'center',
           display: 'flex',
           alignItems: 'flex-start',
-          minHeight: '70rem',
+          minHeight: '90vh',
         },
         '& .max-width__content': {
           width: '100%',

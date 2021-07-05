@@ -15,18 +15,12 @@ const Faq = () => {
 
   return (
     <Layout className={`${classes.root} home-page__container`} color="grey">
-
       <div
         className="max-width__parent"
         id="about"
       >
-
-        <div
-          className="faq__container max-width__content"
-        >
-
+        <div className="faq__container max-width__content">
           <h1 className="faq__title">{t('FAQ')}</h1>
-
           <p className={classnames('context')}>
             {t('context')}
             &nbsp;
@@ -37,38 +31,30 @@ const Faq = () => {
               {t('email')}
             </a>
           </p>
-          <div
-            className={classnames('container')}
-          >
-            <div>
-              <h3>{t('table of content')}</h3>
-              <div
-                className="sticky_box"
-              >
-                <div
-                  style={{
-                    paddingLeft: '0',
-                  }}
-                >
-                  {faqData.map((x, i) => {
-                    return (
-                      <>
-                        <div
-                          className="menu_title"
-                          role="button"
-                          onClick={() => setClickedParagraph(i)}
-                          style={{
-                            color: i === clickedParagraph ? '#FD3B4C' : 'inherit',
-                          }}
-                        >
-                          {t(x.topic)}
-                        </div>
-                      </>
-                    );
-                  })}
-                </div>
+          <h3>{t('table of content')}</h3>
+          <div className={classnames('container')}>
+            <div className="table-content__wrapper">
+              <div className="sticky_box">
+                {faqData.map((x, i) => {
+                  return (
+                    <>
+                      <h2
+                        role="button"
+                        className="menu_title"
+                        // role="button"
+                        onClick={() => setClickedParagraph(i)}
+                        style={{
+                          color: i === clickedParagraph ? '#FD3B4C' : 'inherit',
+                        }}
+                      >
+                        {t(x.topic)}
+                      </h2>
+                    </>
+                  );
+                })}
               </div>
             </div>
+
             <div className={classnames('paragraph')}>
               {faqData.map((x, i) => {
                 return (
