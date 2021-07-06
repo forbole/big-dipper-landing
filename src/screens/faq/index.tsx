@@ -14,7 +14,7 @@ const Faq = () => {
   const [clickedParagraph, setClickedParagraph] = React.useState(0);
 
   return (
-    <Layout className={`${classes.root} home-page__container`} color="grey">
+    <Layout className={`${classes.root} faq-page__container`} color="grey">
       <div
         className="max-width__parent"
         id="about"
@@ -25,7 +25,7 @@ const Faq = () => {
             {t('context')}
             &nbsp;
             <a
-              className={classnames('mail-link')}
+              className={classnames('link')}
               href="mailto:info@forbole.com"
             >
               {t('email')}
@@ -75,6 +75,7 @@ const Faq = () => {
                                 components={{
                                   youtube: (
                                     <a
+                                      className="link"
                                       href={t('video')}
                                       target="_blank"
                                       rel="noreferrer"
@@ -84,6 +85,7 @@ const Faq = () => {
                                   ),
                                   staking: (
                                     <a
+                                      className="link"
                                       href={t('here')}
                                       target="_blank"
                                       rel="noreferrer"
@@ -99,14 +101,18 @@ const Faq = () => {
                                 }}
 
                               />
-                              {question.details?.map((details, index) => {
-                                return (
-                                  <span key={index} className={classnames('details', 'details_container')}>
-                                    ●
-                                    <span className={classnames('details', 'text')}>{t(details.content)}</span>
-                                  </span>
-                                );
-                              })}
+                              <ul>
+                                {question.details?.map((details) => {
+                                  return (
+                                    <li
+                                      key={details.content}
+                                      className={classnames('details', 'text')}
+                                    >
+                                      {t(details.content)}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
                               {t(question.conclusion)}
                             </p>
                           </div>

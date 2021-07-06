@@ -7,6 +7,9 @@ export const useGetStyles = () => {
   const useStyles = makeStyles({
     root: {
       fontSize: '1rem',
+      '& .link': {
+        color: theme.palette.custom.fonts.fontFive,
+      },
       '& .faq__container': {
         padding: '4rem 1rem',
       },
@@ -39,9 +42,6 @@ export const useGetStyles = () => {
         // marginTop: '2rem',
         // marginBottom: theme?.palette?.custom?.gutters?.small,
         marginBottom: '1.5rem',
-        '& .mail-link': {
-          color: theme.palette.custom.fonts.fontFive,
-        },
       },
       '& .subTitle': {
         // marginBottom: '5px',
@@ -65,7 +65,7 @@ export const useGetStyles = () => {
         },
       },
       '& .menu_title': {
-        fontWeight: 500,
+        fontWeight: 400,
         // fontSize: '1rem',
         // marginTop: '2rem',
         // marginBottom: '2rem',
@@ -89,7 +89,8 @@ export const useGetStyles = () => {
         margin: 0,
       },
       '& .table-content__wrapper': {
-        width: '30%',
+        // width: '30%',
+        marginRight: '2.5rem',
       },
       '& .sticky_box': {
         whiteSpace: 'nowrap',
