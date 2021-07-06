@@ -36,16 +36,19 @@ export const useGetStyles = () => {
         whiteSpace: 'nowrap',
       },
       '& .context': {
-        marginTop: '0rem 0 2rem 0',
-        marginBottom: theme?.palette?.custom?.gutters?.small,
+        // marginTop: '2rem',
+        // marginBottom: theme?.palette?.custom?.gutters?.small,
+        marginBottom: '1.5rem',
         '& .mail-link': {
           color: theme.palette.custom.fonts.fontFive,
         },
       },
       '& .subTitle': {
-        marginBottom: '5px',
+        // marginBottom: '5px',
+        marginBottom: '1rem',
         fontWeight: 500,
-        fontSize: '1.125rem',
+        // fontSize: '1.125rem',
+        marginTop: 0,
       },
       '& .details': {
         margin: '0',
@@ -63,11 +66,14 @@ export const useGetStyles = () => {
       },
       '& .menu_title': {
         fontWeight: 500,
-        fontSize: '1rem',
+        // fontSize: '1rem',
         // marginTop: '2rem',
         // marginBottom: '2rem',
         textDecoration: 'none',
         color: '#414141',
+        '&:first-child': {
+          marginTop: 0,
+        },
       },
       '& .menu_subtitle': {
         marginTop: '0.5rem',
@@ -86,6 +92,7 @@ export const useGetStyles = () => {
         width: '30%',
       },
       '& .sticky_box': {
+        whiteSpace: 'nowrap',
         paddingLeft: '0',
         display: 'none',
         [getMinMediaQuery(theme.breakpoints.values.desktop)]: {

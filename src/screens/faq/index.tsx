@@ -31,23 +31,23 @@ const Faq = () => {
               {t('email')}
             </a>
           </p>
-          <h3>{t('table of content')}</h3>
+          {/* <h3>{t('table of content')}</h3> */}
           <div className={classnames('container')}>
             <div className="table-content__wrapper">
               <div className="sticky_box">
                 {faqData.map((x, i) => {
                   return (
-                    <h2
+                    <h4
+                      key={x.topic}
                       role="button"
                       className="menu_title"
-                        // role="button"
                       onClick={() => setClickedParagraph(i)}
                       style={{
                         color: i === clickedParagraph ? '#FD3B4C' : 'inherit',
                       }}
                     >
                       {t(x.topic)}
-                    </h2>
+                    </h4>
                   );
                 })}
               </div>
