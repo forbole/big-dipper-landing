@@ -26,6 +26,7 @@ export const useGetStyles = () => {
         visibility: 'hidden',
       },
       '& .paragraph': {
+        flex: 1,
         // marginTop: '0.5rem',
         // paddingLeft: '6rem',
       },
@@ -54,6 +55,7 @@ export const useGetStyles = () => {
         margin: '0',
         marginBottom: '4rem',
         color: '#414141',
+        lineHeight: 2,
         whiteSpace: 'pre-line',
         '&.details_container': {
           margin: '0.3rem 0 0 2rem',
@@ -65,7 +67,7 @@ export const useGetStyles = () => {
         },
       },
       '& .menu_title': {
-        fontWeight: 400,
+        fontWeight: 500,
         // fontSize: '1rem',
         // marginTop: '2rem',
         // marginBottom: '2rem',
@@ -73,6 +75,9 @@ export const useGetStyles = () => {
         color: '#414141',
         '&:first-child': {
           marginTop: 0,
+        },
+        '&:hover': {
+          cursor: 'pointer',
         },
       },
       '& .menu_subtitle': {
@@ -89,8 +94,8 @@ export const useGetStyles = () => {
         margin: 0,
       },
       '& .table-content__wrapper': {
-        // width: '30%',
-        marginRight: '2.5rem',
+        minWidth: '200px',
+        marginRight: '2rem',
       },
       '& .sticky_box': {
         whiteSpace: 'nowrap',

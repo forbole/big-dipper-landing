@@ -12,6 +12,13 @@ const Faq = () => {
   const { classes } = useGetStyles();
   const faqData = getFaqDetails();
   const [clickedParagraph, setClickedParagraph] = React.useState(0);
+  const [topic, setTopic] = React.useState(1);
+
+  let displayData = faqData;
+
+  if (topic !== 0) {
+    displayData = [faqData[topic - 1]];
+  }
 
   return (
     <Layout className={`${classes.root} faq-page__container`} color="grey">
@@ -41,9 +48,9 @@ const Faq = () => {
                       key={x.topic}
                       role="button"
                       className="menu_title"
-                      onClick={() => setClickedParagraph(i)}
+                      onClick={() => setTopic(i + 1)}
                       style={{
-                        color: i === clickedParagraph ? '#FD3B4C' : 'inherit',
+                        color: i + 1 === topic ? '#FD3B4C' : 'inherit',
                       }}
                     >
                       {t(x.topic)}
@@ -54,19 +61,17 @@ const Faq = () => {
             </div>
 
             <div className={classnames('paragraph')}>
-              {faqData.map((x, i) => {
+              {displayData.map((x) => {
                 return (
                   <div key={x.topic}>
                     <div>
                       {x.questions.map((question) => {
                         return (
-                          <div
-                            key={question.question}
-                            style={{
-                              display: i === clickedParagraph ? 'block' : 'none',
-                            }}
-                          >
-                            <h2 id={question.question} className={classnames('subTitle')}>
+                          <div key={question.question}>
+                            <h2
+                              id={question.question}
+                              className={classnames('subTitle')}
+                            >
                               {t(question.question)}
                             </h2>
                             <p className={classnames('details')}>
@@ -101,20 +106,21 @@ const Faq = () => {
                                 }}
 
                               />
-                              <ul>
-                                {question.details?.map((details) => {
-                                  return (
-                                    <li
-                                      key={details.content}
-                                      className={classnames('details', 'text')}
-                                    >
-                                      {t(details.content)}
-                                    </li>
-                                  );
-                                })}
-                              </ul>
-                              {t(question.conclusion)}
                             </p>
+                            <ul>
+                              {question.details?.map((details) => {
+                                return (
+                                  <li
+                                    key={details.content}
+                                    className={classnames('details', 'text')}
+                                  >
+                                    {t(details.content)}
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                            {t(question.conclusion)}
+
                           </div>
                         );
                       })}
