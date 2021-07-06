@@ -7,6 +7,10 @@ export const useGetStyles = () => {
   const useStyles = makeStyles({
     root: {
       fontSize: '1rem',
+      '& #topic-title': {
+        marginTop: 0,
+        fontWeight: 500,
+      },
       '& .link': {
         color: theme.palette.custom.fonts.fontFive,
       },
@@ -15,7 +19,6 @@ export const useGetStyles = () => {
       },
       '& .faq__title': {
         fontWeight: 700,
-        // marginTop: '4rem',
         fontSize: '2.5rem',
         marginBottom: '0.5rem',
       },
@@ -27,12 +30,9 @@ export const useGetStyles = () => {
       },
       '& .paragraph': {
         flex: 1,
-        // marginTop: '0.5rem',
-        // paddingLeft: '6rem',
       },
       '& .container': {
         display: 'flex',
-        // paddingTop: '20px',
       },
       '& .point': {
         fontWeight: 500,
@@ -40,15 +40,11 @@ export const useGetStyles = () => {
         whiteSpace: 'nowrap',
       },
       '& .context': {
-        // marginTop: '2rem',
-        // marginBottom: theme?.palette?.custom?.gutters?.small,
         marginBottom: '1.5rem',
       },
       '& .subTitle': {
-        // marginBottom: '5px',
         marginBottom: '1rem',
         fontWeight: 500,
-        // fontSize: '1.125rem',
         marginTop: 0,
       },
       '& .details': {
@@ -68,9 +64,6 @@ export const useGetStyles = () => {
       },
       '& .menu_title': {
         fontWeight: 500,
-        // fontSize: '1rem',
-        // marginTop: '2rem',
-        // marginBottom: '2rem',
         textDecoration: 'none',
         color: '#414141',
         '&:first-child': {
@@ -94,8 +87,12 @@ export const useGetStyles = () => {
         margin: 0,
       },
       '& .table-content__wrapper': {
-        minWidth: '200px',
-        marginRight: '2rem',
+        display: 'none',
+        [getMinMediaQuery(theme.breakpoints.values.desktop)]: {
+          display: 'block',
+          minWidth: '200px',
+          marginRight: '2rem',
+        },
       },
       '& .sticky_box': {
         whiteSpace: 'nowrap',

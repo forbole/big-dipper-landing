@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import { useGetScreenSizeHook } from '@src/hooks';
 import {
   Trans, useTranslation,
 } from 'i18n';
@@ -8,13 +9,22 @@ import { useGetStyles } from './styles';
 import getFaqDetails from './utils';
 
 const Faq = () => {
+  const {
+    isMobile, isTablet,
+  } = useGetScreenSizeHook();
   const { t } = useTranslation(['faq']);
   const { classes } = useGetStyles();
   const faqData = getFaqDetails();
-  const [clickedParagraph, setClickedParagraph] = React.useState(0);
   const [topic, setTopic] = React.useState(1);
-
   let displayData = faqData;
+
+  React.useEffect(() => {
+    if (isMobile || isTablet) {
+      setTopic(0);
+    } else if (topic === 0) {
+      setTopic(1);
+    }
+  }, [isMobile, isTablet]);
 
   if (topic !== 0) {
     displayData = [faqData[topic - 1]];
@@ -64,6 +74,7 @@ const Faq = () => {
               {displayData.map((x) => {
                 return (
                   <div key={x.topic}>
+                    <h4 id="topic-title">{t(x.topic)}</h4>
                     <div>
                       {x.questions.map((question) => {
                         return (
@@ -119,8 +130,9 @@ const Faq = () => {
                                 );
                               })}
                             </ul>
-                            {t(question.conclusion)}
-
+                            <p className={classnames('details')}>
+                              {t(question.conclusion)}
+                            </p>
                           </div>
                         );
                       })}

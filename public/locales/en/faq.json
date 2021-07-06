@@ -6,7 +6,7 @@
     "inflationQuestion": "What is inflation?",
     "inflatinAnswer": "Amount of tokens of a Proof-of-Stake blockchain will grow annually, which is called inflation. The growth rate is the inflation rate of the chain. ",
     "delegatorsQuestion": "Who can be delegators (stakers)?",
-    "delegatorsAnswer": "In Proof-of-Stake blockchains, every token holder who stakes their tokens (partially or all) to a validator(s) is a delegator, sometimes also called s staker. By staking their tokens, delegators contribute to the overall security of a Proof-of-Stake blockchain.",
+    "delegatorsAnswer": "In Proof-of-Stake blockchains, every token holder who stakes their tokens (partially or all) to a validator(s) is a delegator, sometimes also called a staker. By staking their tokens, delegators contribute to the overall security of a Proof-of-Stake blockchain.",
     "stakingQuestion": "What is staking?",
     "stakingAnswer": "The action that token holders delegate their tokens to validators to secure the network is called staking. Staked tokens are eligible to receive staking rewards. Newly minted tokens and transactions fees are given out as rewards to bonded staking token holders.\n\nDelegators stake their staking power to validators, but that does not mean the validators possess or have custody of the tokens delegated to them. In other words, validators cannot steal or take away delegators’ tokens. Your delegated amount of tokens will not be decreased in most situations, however, if your validator is punished by slashing, your delegated token is at risk of being slashed too (see below for “slashing”).",
     "stakingRewardQuestion": "What is staking reward and how often are the rewards distributed?",
