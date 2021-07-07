@@ -18,7 +18,7 @@ describe('Faq', () => {
       wrapper.find('h2').first().text(),
     ).toBe('posQuestion');
     expect(
-      wrapper.find('p').find('.mail-link').first().text(),
+      wrapper.find('p').find('.link').first().text(),
     ).toBe('email');
   });
 });
